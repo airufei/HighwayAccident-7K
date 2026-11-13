@@ -1,0 +1,91 @@
+{
+ "generated_at": "2026-11-10T17:05:45",
+ "root": "datasets/accident_v26",
+ "subsets": {
+  "annotations": {
+   "files": 16,
+   "bytes": 432895392,
+   "GiB": 0.4
+  },
+  "bilibili_data": {
+   "files": 6501,
+   "bytes": 349302569,
+   "GiB": 0.33
+  },
+  "corrections": {
+   "files": 0,
+   "bytes": 0,
+   "GiB": 0.0
+  },
+  "external_data": {
+   "files": 7920,
+   "bytes": 1238528595,
+   "GiB": 1.15
+  },
+  "images": {
+   "files": 435440,
+   "bytes": 93926254674,
+   "GiB": 87.48
+  },
+  "integrated": {
+   "files": 7415,
+   "bytes": 1237520431,
+   "GiB": 1.15
+  },
+  "labels": {
+   "files": 435442,
+   "bytes": 399682313,
+   "GiB": 0.37
+  },
+  "lane_annotations": {
+   "files": 7,
+   "bytes": 389411,
+   "GiB": 0.0
+  },
+  "lane_annotations_v2": {
+   "files": 7,
+   "bytes": 490849,
+   "GiB": 0.0
+  },
+  "lane_annotations_v3": {
+   "files": 7,
+   "bytes": 490849,
+   "GiB": 0.0
+  },
+  "lane_labels": {
+   "files": 16577,
+   "bytes": 6053369,
+   "GiB": 0.01
+  },
+  "meta": {
+   "files": 767749,
+   "bytes": 3736416182,
+   "GiB": 3.48
+  },
+  "rare_frames_v26": {
+   "files": 1,
+   "bytes": 942,
+   "GiB": 0.0
+  },
+  "rear_end_data": {
+   "files": 65669,
+   "bytes": 6684204677,
+   "GiB": 6.23
+  },
+  "rear_end_unified": {
+   "files": 71592,
+   "bytes": 30387651,
+   "GiB": 0.03
+  },
+  "scene_labels": {
+   "files": 435440,
+   "bytes": 1132630,
+   "GiB": 0.0
+  },
+  "type_labels": {
+   "files": 435440,
+   "bytes": 1171320,
+   "GiB": 0.0
+  }
+ }
+}

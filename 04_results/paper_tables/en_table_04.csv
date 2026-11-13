@@ -1,0 +1,8 @@
+Class,Labeled n,P,R,AP,Active in final training phase
+Rear-end,696,0.953,0.953,0.980,Yes
+Head-on,378,0.889,0.955,0.977,Yes
+Other,312,0.920,0.920,0.966,Yes
+Side impact,346,0.795,0.919,0.926,Yes
+Fixed object,138,0.570,0.681,0.672,Yes
+Rollover,104,0.000,0.000,0.296,No
+Pedestrian collision,6,0.000,0.000,—,No

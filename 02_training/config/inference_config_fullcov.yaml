@@ -1,0 +1,54 @@
+# inference_config.yaml — V26 视频推理/部署配置 (video_inference.py --config 的唯一正本)
+# 路径规则: checkpoint / model_yaml / output_dir / meta_face_dir 相对项目根解析 (load_config)。
+# 相对路径不是名字 — 换 CWD 会指到空壳目录, 用绝对路径运行脚本即可。
+
+# ── 权重 ──
+# 交付件 = 相位3 顶层 best_temporal.pt (dict 外壳, 内层 model_state_dict)。
+# 3c 已于 2026-11-03 17:28 收官; 交付件是**轮8 代**而非末轮件 (末面 val_metric 87.78493
+# < 轮8 87.84461 ⇒ 换代三件不齐)。另一条 runs/v26_dw_lane_g286_p3c/ 只跑到 epoch 6, 不是交付。
+checkpoint: runs/v26_dw_lane_g304_p3c/best_temporal.pt
+model_yaml: config/yolo26m_detect_cls_fixed.yaml
+
+# ── 模型输入口径 (必须与训练一致; clip_len 不一致会被 shape 硬闸拦下) ──
+clip_len: 16
+input_size: 640
+device: "0"
+
+# ── 抽帧 ──
+fps_sample: 5            # 每秒采样帧数; 输出视频也按这个帧率回放
+max_frames_per_video: 20000   # G-352 全量覆盖：3657s×5fps=18285 帧封顶⇒14 视频全片评完（原 2000=只评前400s，语料 48% 未评）
+
+# ── 语料 (正式面的宇宙, 必须显式钉住) ──
+# resolve_videos 的兜底是 training-videos + tumtraf_a9/raw_videos 两个目录一起扫
+# (实测 14 + 1001 只); 不写这一项就会把正式面悄悄扩成 1015 只 ⇒ 口径不可引。
+# 这里只接受绝对路径 (load_config 不解析 video_dirs 的相对写法)。
+video_dirs:
+  - datasets/training-videos
+
+# ── 检测框 (可视化用; 与场景/类型/成因头无关) ──
+# box_source 会写进结果 JSON: 相位3 的时序梯度会改写检测支路 (#271),
+# 所以框用独立 COCO 权重, 不能当成模型自检输出引用。
+box_weights: weights/yolo26n.pt
+conf_threshold: 0.25
+
+# ── 判定阈值 ──
+cause_conf: 0.35         # 成因保留阈值 (sigmoid)
+max_causes: 3            # 每帧最多显示成因数
+crash_prob_thresh: 0.15  # crash 概率触发线 (argmax 之外的第二触发)
+pre_crash_run_len: 8     # 连续 pre_crash 帧数触发线 (第三触发)
+
+# ── 事件级去重 (postprocess.EventDetector) ──
+event_min_frames: 3
+event_min_duration_s: 0.6
+
+# ── 产物落点 ──
+save_video: true
+video_codec: mp4v
+output_dir: runs/inference_video_full          # 标注视频 + 逐帧 csv + 单视频 json
+meta_face_dir: datasets/accident_v26/meta/inference_full # §7: 机器可读面落这里
+
+# ── 服务 (inference_server.py) ──
+server:
+  host: 127.0.0.1
+  port: 8010
+  max_concurrency: 1

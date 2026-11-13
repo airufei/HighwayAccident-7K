@@ -1,0 +1,8 @@
+Component,Recorded setting
+Temporal checkpoint,Epoch 8
+Input and sampling,16 frames; 640 × 640 model input; 5 sampled frames/s
+Video window advance,1 sampled frame; average over covering windows
+Display-box model,Separate YOLO26n weights; detection confidence 0.25
+Factor display,Score at least 0.35; at most three labels
+Frame-level overlay trigger,"Crash argmax, crash score at least 0.15, or current pre-crash with a non-normal run of at least 8 frames"
+Event grouping,Consecutive crash scores strictly above 0.15; at least 3 frames and an end-minus-start span of at least 0.6 s

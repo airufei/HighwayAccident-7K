@@ -1,0 +1,9 @@
+Configuration,Scene accuracy,Balanced accuracy,macro-F1,Crash recall,Pre-crash recall,FAR
+"Temporal, final checkpoint",84.98,77.61,72.27,78.06,66.67,11.90
+"Temporal, final, two flagged records excluded",84.97,77.60,72.26,78.03,66.67,11.90
+"Temporal, epoch 8",85.24,77.01,70.92,77.64,64.71,11.32
+Stage-I reference,78.96,69.64,61.92,75.00,52.94,19.03
+"MLP, last-loss / frame readout",78.87,74.58,59.60,70.87,70.59,17.71
+"MLP, mean-loss / frame readout",78.50,75.37,59.11,69.23,74.51,17.62
+"MLP, middle-loss / frame readout",79.04,73.99,59.62,70.73,68.63,17.38
+"GRU, frame readout",82.00,78.76,65.35,71.44,78.43,13.60

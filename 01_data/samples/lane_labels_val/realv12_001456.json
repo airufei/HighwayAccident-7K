@@ -1,0 +1,1 @@
+{"stem": "realv12_001456", "boundary_none": {"left": false, "right": false}, "lines": [], "geom_fix_note": "G-244 几何修复: 语义=VLM 弱标签原样(role/型/色未动), 几何=经典CV脊吸附(加密+法线搜索+中值平滑), 门槛 对比度>=0.20 显著度>=0.08 抖动<=12"}

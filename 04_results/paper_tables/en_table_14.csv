@@ -1,0 +1,5 @@
+Dataset,Configuration,Three-class balanced accuracy,Crash recall,FAR
+DADA-2000,Previous-generation system,32.61,0.00,9.05
+DADA-2000,"Temporal, epoch 8",33.67,89.65,91.94
+CCD,Previous-generation system,—,—,80.61
+CCD,"Temporal, epoch 8",—,—,98.98

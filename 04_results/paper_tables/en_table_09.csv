@@ -1,0 +1,6 @@
+Endpoint,Paired records,Primary,Additional seed 1,Additional seed 2
+Factor-bit agreement,11144,89.698,89.878,89.725
+Normal-record FAR,3168,16.446,17.014,16.793
+Archived within-window by-onset marker,2374,82.182,82.435,82.730
+Correct-type yield,2319,74.256,73.566,73.523
+Active-type accuracy,1869,92.135,91.279,91.225

@@ -1,0 +1,68 @@
+{
+ "train": {
+  "scene_frames": 346048,
+  "scene_counts": {
+   "0": 159315,
+   "1": 98108,
+   "2": 15814,
+   "3": 72811
+  },
+  "type_frames": 346048,
+  "type_counts": {
+   "-1": 279013,
+   "0": 22518,
+   "1": 12098,
+   "2": 1194,
+   "3": 124,
+   "4": 16549,
+   "5": 3476,
+   "6": 11076
+  },
+  "cause_valid_frames": 93325,
+  "cause_positive_frames": {
+   "tailgating": 8880,
+   "speeding": 6568,
+   "dangerous_lane_change": 6504,
+   "standing_shoulder": 545,
+   "pedestrian_highway": 0,
+   "heavy_rain": 7095,
+   "heavy_snow": 1012,
+   "distracted_driving": 0,
+   "low_visibility": 7098
+  },
+  "bad": 0
+ },
+ "val": {
+  "scene_frames": 89392,
+  "scene_counts": {
+   "0": 45092,
+   "1": 22030,
+   "2": 2178,
+   "3": 20092
+  },
+  "type_frames": 89392,
+  "type_counts": {
+   "-1": 70133,
+   "0": 7248,
+   "1": 3030,
+   "2": 615,
+   "3": 32,
+   "4": 4170,
+   "5": 956,
+   "6": 3208
+  },
+  "cause_valid_frames": 25771,
+  "cause_positive_frames": {
+   "tailgating": 2494,
+   "speeding": 1699,
+   "dangerous_lane_change": 2354,
+   "standing_shoulder": 161,
+   "pedestrian_highway": 0,
+   "heavy_rain": 2379,
+   "heavy_snow": 254,
+   "distracted_driving": 0,
+   "low_visibility": 2367
+  },
+  "bad": 0
+ }
+}

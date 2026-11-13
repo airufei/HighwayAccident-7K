@@ -1,0 +1,19 @@
+# V26-G351: CCD 外部基准考卷（V25 对照资产整合，只读评估，不训练）
+# 源=datasets/ccd_data_yolo（11,368 帧，train 9518 + val 1849，V25 已 yolo 化）。
+# V25 口径注记：当年以"合并 2 分类后处理"跑分（54.9%/F1 70.9，见 v25_inference_test
+# 论文实验数据报告 §3.4）；本轮走 V26 在册 clip-head 尺三分类原口径，两数不可直接互比，
+# 对照表里分行标注协议。
+path: datasets/ccd_data_yolo
+train: images/train
+val: images/val
+labels_dir: labels
+scene_labels_dir: scene_labels
+cause_labels_dir: cause_labels      # 不存在 ⇒ 掩蔽
+type_labels_dir: type_labels        # 不存在 ⇒ -1 掩蔽
+lane_labels_dir: lane_labels
+nc: 3
+names: {0: car, 1: person, 2: cyclist}
+nc_cls: 3
+scene_names: {0: ignore, 1: normal, 2: pre_crash, 3: crash}
+num_causes: 9
+num_types: 7

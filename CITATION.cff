@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite this versioned research companion repository and the associated manuscript when available."
+title: "HighwayAccident-7K: data annotations, models, and evaluation code"
+type: software
+version: 0.1.0
+date-released: '2026-11-13'
+authors:
+  - family-names: Ai
+    given-names: Rufei
+repository-code: 'https://github.com/airufei/HighwayAccident-7K'
+license: AGPL-3.0-only

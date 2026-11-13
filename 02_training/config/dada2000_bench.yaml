@@ -1,0 +1,17 @@
+# V26-G351: DADA-2000 外部基准考卷（对照实验，只读评估，不训练）
+# path 指向 dada2000_to_bench.py 产出的 bench 树；头维度键与事故 yaml 同值，
+# 保证 eval_acceptance 建模型时权重逐键对上。
+path: datasets/DADA2000/bench
+train: images/val          # 外部考卷无 train 语义，指同目录防加载器探空
+val: images/val
+labels_dir: labels
+scene_labels_dir: scene_labels
+cause_labels_dir: cause_labels      # 不存在 ⇒ cause_valid=0 掩蔽
+type_labels_dir: type_labels
+lane_labels_dir: lane_labels        # 不存在 ⇒ 全 255 无监督
+nc: 3
+names: {0: car, 1: person, 2: cyclist}
+nc_cls: 3
+scene_names: {0: ignore, 1: normal, 2: pre_crash, 3: crash}
+num_causes: 9
+num_types: 7

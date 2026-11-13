@@ -1,0 +1,7 @@
+Measurement,Value
+Parameters,33.06M
+"Throughput, including decoding and post-processing",3.58 frames/s
+Per-clip inference latency,p50 114 ms; p95 124 ms
+Detection forward pass,p50 13.5 ms/frame
+Peak GPU memory,"2,378 MB"
+Unlabeled processing corpus,"49,928 frames / 669 event records"

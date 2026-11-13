@@ -1,0 +1,81 @@
+{
+ "dataset": "HighwayAccident-7K (V26 release)",
+ "layout": {
+  "images": "images/{train,val}/<stem>.jpg",
+  "detection_labels": "labels/{train,val}/<stem>.txt (YOLO: class cx cy w h, normalized; may carry extra fields)",
+  "scene_labels": "scene_labels/{train,val}/<stem>.txt (line1=scene id; line2=optional 9-bit cause)",
+  "type_labels": "type_labels/{train,val}/<stem>.txt (single integer)",
+  "lane_labels": "lane_labels/{train,val}/<stem>.json (lane polylines)",
+  "annotations": "annotations/ (calibration and auxiliary JSONL)"
+ },
+ "detection": {
+  "classes": {
+   "0": "car",
+   "1": "person",
+   "2": "cyclist"
+  },
+  "format": "YOLO txt"
+ },
+ "scene": {
+  "encoding": "line 1",
+  "classes": {
+   "0": "ignore",
+   "1": "normal",
+   "2": "pre_crash",
+   "3": "crash"
+  },
+  "note": "class 0 marks frames excluded from scene supervision"
+ },
+ "type": {
+  "encoding": "single integer",
+  "classes": {
+   "-1": "unlabeled",
+   "0": "rear_end",
+   "1": "side_impact",
+   "2": "rollover",
+   "3": "pedestrian_hit",
+   "4": "head_on",
+   "5": "fixed_object",
+   "6": "other"
+  },
+  "note": "only valid on crash-positive frames"
+ },
+ "cause": {
+  "encoding": "line 2, 9 bits either comma-separated or a 16-bit mask (bit i -> cause[i])",
+  "order": [
+   "tailgating",
+   "speeding",
+   "dangerous_lane_change",
+   "standing_shoulder",
+   "pedestrian_highway",
+   "heavy_rain",
+   "heavy_snow",
+   "distracted_driving",
+   "low_visibility"
+  ],
+  "supervised_bits": [
+   0,
+   1,
+   2,
+   3,
+   5,
+   6,
+   8
+  ],
+  "note": "bits 4 and 7 never have positives; missing line => no cause annotation"
+ },
+ "lane": {
+  "encoding": "JSON with stem and lines (polyline point lists) and boundary_none flags"
+ },
+ "weights": {
+  "type_class_weight": [
+   1.8,
+   1.2,
+   1.8,
+   2.5,
+   1.2,
+   1.8,
+   1.2
+  ]
+ }
+}

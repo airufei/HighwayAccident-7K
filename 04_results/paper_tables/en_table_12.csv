@@ -1,0 +1,13 @@
+Population,Metric,Point,Video-ID CI,Parsed-event CI
+Full retained,Balanced accuracy,77.60,"[72.32, 82.39]","[72.24, 81.92]"
+Full retained,Crash recall,78.03,"[71.84, 84.09]","[68.55, 85.52]"
+Full retained,FAR,11.90,"[8.24, 18.61]","[6.57, 22.49]"
+Full retained,Labeled-type accuracy,87.06,"[80.89, 92.40]","[81.10, 92.05]"
+Full retained,Active-type accuracy,92.14,"[89.65, 94.38]","[89.55, 94.45]"
+Full retained,Factor F1,66.74,"[61.65, 71.76]","[61.55, 71.71]"
+Non-CARLA retained,Balanced accuracy,73.61,"[64.99, 81.82]","[52.13, 81.55]"
+Non-CARLA retained,Crash recall,71.56,"[59.76, 84.56]","[54.72, 87.53]"
+Non-CARLA retained,FAR,5.72,"[2.68, 17.19]","[2.13, 84.95]"
+Non-CARLA retained,Labeled-type accuracy,33.79,"[23.49, 46.13]","[23.58, 46.03]"
+Non-CARLA retained,Active-type accuracy,48.06,"[37.45, 58.16]","[38.24, 57.90]"
+Non-CARLA retained,Factor F1,41.27,"[35.45, 48.71]","[35.65, 48.31]"

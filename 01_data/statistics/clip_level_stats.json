@@ -1,0 +1,45 @@
+{
+ "source": "clip-level readings as reported in the manuscript (Section 7.3 / Section 8)",
+ "evaluation_universe": {
+  "clips": 5556,
+  "crash_positive": 1971,
+  "type_labeled": 1980,
+  "in_curriculum_type": 1870,
+  "cause_labeled": 2976,
+  "main_eval": 4866
+ },
+ "phase3_training_universe": {
+  "clips": 23614,
+  "train_side": 22638,
+  "val_side": 976,
+  "crash_true": 6697,
+  "all_three_tasks": 2931
+ },
+ "frames": {
+  "train": 346048,
+  "val": 89392,
+  "note": "after removing clips containing tile frames, 288118 / 73958 enter phase-3 loss"
+ },
+ "type_gt_per_class": {
+  "rear_end": 696,
+  "head_on": 378,
+  "other": 312,
+  "side_impact": 346,
+  "fixed_object": 138,
+  "rollover": 104,
+  "pedestrian_hit": 6
+ },
+ "cause_positive_clips": {
+  "tailgating": 325,
+  "speeding": 209,
+  "dangerous_lane_change": 254,
+  "standing_shoulder": 38,
+  "heavy_rain": 424,
+  "heavy_snow": 32,
+  "low_visibility": 409
+ },
+ "synthetic_share": {
+  "eval_clips": "44.6%",
+  "train_frames": "65.4%"
+ }
+}

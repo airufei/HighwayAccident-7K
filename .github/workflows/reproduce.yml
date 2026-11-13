@@ -1,0 +1,20 @@
+name: Reproduce released results
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  score-reproduction:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: requirements-evaluation.txt
+      - run: python -m pip install -r requirements-evaluation.txt
+      - run: python tools/verify_release.py --skip-models
+      - run: python tools/check_label_restoration.py
+      - run: python 03_evaluation/reproduce.py --check

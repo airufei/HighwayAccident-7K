@@ -1,0 +1,14 @@
+{
+  "final_epoch10": {
+    "sha256_uncompressed": "4d82f4cee918b79aad56ad0aef118afd99946be12966443ae160f0d58313428f",
+    "bytes_uncompressed": 5340108
+  },
+  "DADA2000": {
+    "sha256_uncompressed": "4fe96372b5e20453aedfcb4e9de946ffa59ec09a9eb798aa23e2bff97f8199ba",
+    "bytes_uncompressed": 39098739
+  },
+  "CCD": {
+    "sha256_uncompressed": "3b9d4cce1c7969609a7eb5059fbb96c3d56ebdfdf9db79f455c737fd86f5d393",
+    "bytes_uncompressed": 587599
+  }
+}

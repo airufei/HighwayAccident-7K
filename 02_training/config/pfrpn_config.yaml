@@ -1,0 +1,41 @@
+# V25 PF-RPN 配置
+# Proposal-Free Region Proposal Network — 无类别约束的候选区域生成器
+
+pfrpn:
+  enable: true
+  hidden_dim: 256
+  strides: [8, 16, 32]
+
+  # 损失权重
+  loss:
+    weight_obj: 1.0     # objectness focal loss 权重
+    weight_box: 2.0     # box GIoU loss 权重
+    weight_cen: 0.5     # centerness BCE loss 权重
+    focal_alpha: 0.25   # focal loss alpha (前景权重)
+    focal_gamma: 2.0    # focal loss gamma (难样本聚焦)
+    warmup_epochs: 5    # warmup epoch 数 (权重 × warmup_scale)
+    warmup_scale: 0.5   # warmup 期间权重缩放因子
+
+  # FPN 级别面积分配 (像素面积²)
+  area_ranges:
+    - [0, 1024]        # P3: 小目标 (area < 32²)
+    - [1024, 9216]     # P4: 中目标 (32² ≤ area < 96²)
+    - [9216, 10000000] # P5: 大目标 (area ≥ 96²)
+
+  # 推理配置
+  inference:
+    conf_thresh: 0.3    # objectness * centerness 阈值
+    nms_thresh: 0.6     # NMS IoU 阈值
+    top_k: 200          # 每图最多保留提案数
+
+  # 融合配置 (PFRPN + DetectClassify)
+  fusion:
+    boost_alpha: 0.1    # 匹配检测的置信度提升系数
+    iou_match: 0.5      # IoU ≥ 此值 → 匹配
+    iou_suppress: 0.3   # IoU ≥ 此值 → PFRPN 提案被抑制
+
+  # Phase 集成策略
+  phase:
+    phase1: trainable   # Phase 1: 可训练 (含 warmup)
+    phase2: trainable   # Phase 2: 可训练 (权重减半)
+    phase3: frozen      # Phase 3: 冻结

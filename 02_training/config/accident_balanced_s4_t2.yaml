@@ -1,0 +1,90 @@
+# V22 AccidentFormer-3D ACCIDENT 数据集配置 (合成帧 2x2 切块版)
+# 由 scripts/tile_synth.py 从 accident_v24_balanced_s4 生成。
+# 目的: 源帧 2560x1440 在 imgsz=640 下车辆仅 15-40px → mAP 瓶颈;
+#       切块后目标放大 2x (30-80px)。
+# 其余配置与 accident_balanced_s4.yaml 一致。
+
+path: datasets/accident_v26_s4_t2
+
+# ── 图像目录 ──
+train: images/train
+val: images/val
+test: images/test
+
+# ── 标签目录 (与 V21 格式完全一致) ──
+labels_dir: labels
+scene_labels_dir: scene_labels
+cause_labels_dir: cause_labels
+type_labels_dir: type_labels
+tta_labels_dir: tta_labels
+
+# ── 目标检测类别 ──
+nc: 3
+names:
+  0: car
+  1: person
+  2: cyclist
+
+# ── 场景分类配置 ──
+nc_cls: 3
+scene_names:
+  0: ignore
+  1: normal
+  2: pre_crash
+  3: crash
+
+scene_cls_weight: 1.0
+
+# ── 事故成因配置 (V24: VLM 已标注 16-bit 成因, P1 起全阶段监督) ──
+num_causes: 9
+cause_names:
+  0: tailgating
+  1: speeding
+  2: dangerous_lane_change
+  3: standing_shoulder
+  5: pedestrian_highway
+  6: heavy_rain
+  7: heavy_snow
+  7: distracted_driving
+  8: low_visibility
+
+# ── 事故类型配置 ──
+num_types: 7
+type_names:
+  0: rear_end
+  1: side_impact
+  2: rollover
+  3: pedestrian_hit
+  4: head_on
+  5: fixed_object
+  6: other
+
+accident_type_map:
+  rear-end: 0
+  t-bone: 1
+  head-on: 4
+  sideswipe: 6
+  single: 5
+
+accident_viz:
+  enable: true
+  interval: 5
+  split: val
+  train_max_per_class: 8
+  min_boxes: 0
+  min_pred_boxes: 0
+  conf_thres: 0.25
+  iou_thres: 0.45
+  imgsz: 640
+
+lr0: 0.001
+epochs: 60
+imgsz: 640
+batch: 48
+optimizer: SGD
+cos_lr: true
+amp: true
+warmup_epochs: 2
+weight_decay: 0.0005
+dropout: 0.0
+mixup: 0.0

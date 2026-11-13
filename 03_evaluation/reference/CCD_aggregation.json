@@ -1,0 +1,85 @@
+{
+  "label": "CCD",
+  "scores": "clip_scores.jsonl",
+  "independent": false,
+  "fps_assumed": 3.0,
+  "n_rows": 596,
+  "variants": {
+    "0.5": {
+      "n_videos": 593,
+      "n_positive_events": 0,
+      "n_detected_events": 0,
+      "event_recall": 0.0,
+      "normal_clips": 98,
+      "normal_hours": 0.0726,
+      "false_alerts": 51,
+      "fa_per_hour": 702.551,
+      "threshold": 0.5,
+      "ci": {
+        "event_recall_ci95": null,
+        "fa_per_hour_ci95": [
+          570.54,
+          829.52
+        ],
+        "n_boot": 1000
+      }
+    },
+    "0.8": {
+      "n_videos": 593,
+      "n_positive_events": 0,
+      "n_detected_events": 0,
+      "event_recall": 0.0,
+      "normal_clips": 98,
+      "normal_hours": 0.0726,
+      "false_alerts": 41,
+      "fa_per_hour": 564.796,
+      "threshold": 0.8,
+      "ci": {
+        "event_recall_ci95": null,
+        "fa_per_hour_ci95": [
+          429.55,
+          704.89
+        ],
+        "n_boot": 1000
+      }
+    },
+    "0.9": {
+      "n_videos": 593,
+      "n_positive_events": 0,
+      "n_detected_events": 0,
+      "event_recall": 0.0,
+      "normal_clips": 98,
+      "normal_hours": 0.0726,
+      "false_alerts": 35,
+      "fa_per_hour": 482.143,
+      "threshold": 0.9,
+      "ci": {
+        "event_recall_ci95": null,
+        "fa_per_hour_ci95": [
+          356.01,
+          615.24
+        ],
+        "n_boot": 1000
+      }
+    },
+    "argmax": {
+      "n_videos": 593,
+      "n_positive_events": 0,
+      "n_detected_events": 0,
+      "event_recall": 0.0,
+      "normal_clips": 98,
+      "normal_hours": 0.0726,
+      "false_alerts": 52,
+      "fa_per_hour": 716.327,
+      "threshold": 0.5,
+      "ci": {
+        "event_recall_ci95": null,
+        "fa_per_hour_ci95": [
+          582.3,
+          847.42
+        ],
+        "n_boot": 1000
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "epoch": 10,
+  "tensor_keys": 886,
+  "all_model_tensors_unchanged": true,
+  "original_sha256": "85142ca5cf5296fd3140363a8146560f7d175dffbab0cfaa158f413df504ca2c",
+  "export_sha256": "c0ba98f11b08473ec7bd5e93f867e2965d6a069a6848733ca52dae8ebdd04a3d",
+  "export_bytes": 151796247,
+  "omitted": [
+    "optimizer_state_dict",
+    "scheduler_state_dict",
+    "scaler_state_dict",
+    "private_run_metadata"
+  ],
+  "license": "AGPL-3.0-only"
+}

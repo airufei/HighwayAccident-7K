@@ -1,0 +1,8 @@
+Factor,Positive labels,AP,AUC
+Tailgating,325,0.657,0.809
+Speeding,209,0.371,0.764
+Dangerous lane change,254,0.451,0.814
+Stopping on the shoulder,38,0.134,0.749
+Heavy rain,424,0.883,0.947
+Heavy snow,32,0.236,0.853
+Low visibility,409,0.859,0.916

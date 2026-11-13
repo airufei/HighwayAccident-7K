@@ -1,0 +1,5 @@
+Configuration change,Paired endpoint,Difference (pp; 95% CI),p / q
+No curriculum,Active-type accuracy,"−1.552 [−2.140, −1.017]",2.98e-08 / 1.42e-07
+Consistency off,Correct-type yield,"−0.819 [−1.423, −0.259]",0.00794 / 0.0182
+Weak supervision off,Correct-type yield,"−0.862 [−1.423, −0.302]",0.00289 / 0.00814
+Roadside-source-only training,Correct-type yield,"−12.462 [−13.799, −11.039]",2.74e-74 / 4.25e-73

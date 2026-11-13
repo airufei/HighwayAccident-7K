@@ -1,0 +1,9 @@
+* text=auto eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.csv text eol=lf
+*.gz binary
+*.npz binary
+models/*.pt filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,6 @@
+Endpoint,Unit and eligible sample,Model / definition
+Scene classification,"4,866 valid clips: 3,411 normal, 51 pre-crash, 1,404 crash",Final checkpoint; last-valid-frame scene decision
+Type accuracy,"1,980 scorable labels; active subset 1,870",Correct predictions / scorable labels; 343 unscorable records excluded
+Factor-label performance,"1,596 active records, seven supervised bits",Final checkpoint; thresholded micro counts and per-label AP
+Dataset-specific comparison,"DADA-2000: 29,164 clips; CCD: 596 clips",Epoch-8 checkpoint; fixed scoring protocol
+Domain mixing,"DADA holdout: 197 videos / 2,769 clips",Comparisons restricted to the same holdout

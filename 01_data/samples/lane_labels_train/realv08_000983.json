@@ -1,0 +1,11 @@
+{
+ "stem": "realv08_000983",
+ "boundary_none": {
+  "left": false,
+  "right": false
+ },
+ "lines": [],
+ "geom_fix_note": "G-244 几何修复: 语义=VLM 弱标签原样(role/型/色未动), 几何=经典CV脊吸附(加密+法线搜索+中值平滑), 门槛 对比度>=0.20 显著度>=0.08 抖动<=12",
+ "sem_strip": "G248_sem_gate",
+ "sem_strip_note": "语义闸考卷严判 0/40+随机 0/24 ⇒ G-244 保留线判停、剥回未标注（见 lane_sem_gate_G248_verdict.json）"
+}

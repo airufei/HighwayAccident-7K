@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+03_evaluation/.cache/
+04_results/recomputed/
+05_figures/output/
+05_figures/figures/
+02_training/runs/
+02_training/weights/
+datasets/
+restored_labels/
+*.log

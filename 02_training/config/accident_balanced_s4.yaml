@@ -1,0 +1,99 @@
+# V22 AccidentFormer-3D ACCIDENT 数据集配置
+# 用于 V22 train.py: --yaml config/accident_detect.yaml
+#
+# 数据源: ACCIDENT (CVPR 2026W)
+#   - 2,027 真实 CCTV clip + 2,211 CARLA 合成 clip
+#   - 3-5 名标注者人工投票 + 不确定性感知融合
+#   - 5 类碰撞: rear-end / t-bone / head-on / sideswipe / single
+
+# ── 数据集根路径 (由 --data-root CLI 参数覆盖) ──
+# convert_accident.py 默认输出到 datasets/accident_v22/
+path: datasets/accident_v26_balanced_s4
+
+# ── 图像目录 ──
+train: images/train
+val: images/val
+test: images/test
+
+# ── 标签目录 (与 V21 格式完全一致) ──
+labels_dir: labels              # 目标检测标签 (YOLO 14 字段; 合成集有值, 真实集空)
+scene_labels_dir: scene_labels  # 场景分类标签 (0=ignore, 1=normal, 2=pre_crash, 3=crash)
+cause_labels_dir: cause_labels  # 事故成因多标签 (16-bit; ACCIDENT 无此标注, 全为 0)
+type_labels_dir: type_labels    # 事故类型标签 (0-9, 仅 crash 有效)
+tta_labels_dir: tta_labels      # TTA 回归标签 (V22: 已废弃)
+
+# ── 目标检测类别 ──
+nc: 3
+names:
+  0: car
+  1: person
+  2: cyclist
+
+# ── 场景分类配置 ──
+nc_cls: 3
+scene_names:
+  0: ignore
+  1: normal
+  2: pre_crash
+  3: crash
+
+scene_cls_weight: 1.0
+
+# ── 事故成因配置 (V24: VLM 已标注 16-bit 成因, P1 起全阶段监督) ──
+num_causes: 9
+cause_names:
+  0: tailgating
+  1: speeding
+  2: dangerous_lane_change
+  3: standing_shoulder
+  5: pedestrian_highway
+  6: heavy_rain
+  7: heavy_snow
+  7: distracted_driving
+  8: low_visibility
+
+# ── 事故类型配置 (ACCIDENT 5 类映射到此 10 类) ──
+num_types: 7
+type_names:
+  0: rear_end        # ← ACCIDENT rear-end
+  1: side_impact     # ← ACCIDENT t-bone
+  2: rollover
+  3: pedestrian_hit
+  5: head_on         # ← ACCIDENT head-on
+  6: fixed_object    # ← ACCIDENT single
+  7: pileup
+  8: vehicle_fall
+  9: other           # ← ACCIDENT sideswipe
+
+# ── ACCIDENT 碰撞类型映射 ──
+accident_type_map:
+  rear-end: 0
+  t-bone: 1
+  head-on: 4
+  sideswipe: 6
+  single: 5
+
+# ── 事故可视化配置 ──
+accident_viz:
+  enable: true
+  interval: 5
+  split: val
+  train_max_per_class: 8
+  min_boxes: 0          # ACCIDENT 真实集无 bbox, 放宽至 0
+  min_pred_boxes: 0
+  conf_thres: 0.25
+  iou_thres: 0.45
+  imgsz: 640
+
+# ── 训练超参数参考 (V22 实际值见 train_config.py V22_PHASE_*) ──
+lr0: 0.001
+epochs: 40
+imgsz: 640
+batch: 32
+optimizer: SGD
+cos_lr: true
+amp: true
+warmup_epochs: 5
+weight_decay: 0.0005    # Phase 1/2; Phase 3 为 0.05
+dropout: 0.0            # Phase 1/2; Phase 3 为 0.5
+mixup: 0.0

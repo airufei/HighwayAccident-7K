@@ -1,0 +1,11 @@
+{
+  "event_ids": [
+    "real_kaggle-fahaddalwai-cctvfootagevideo_5",
+    "real_ccd_001397"
+  ],
+  "validation_row_indices": [
+    392,
+    272
+  ],
+  "reason": "Conservative exclusion of two cross-split content-hash candidates; original inventory remains archived."
+}

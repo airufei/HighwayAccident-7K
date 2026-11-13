@@ -1,0 +1,97 @@
+{
+  "label": "DADA2000",
+  "scores": "clip_scores.jsonl",
+  "independent": true,
+  "fps_assumed": 12.5,
+  "n_rows": 39488,
+  "variants": {
+    "0.5": {
+      "n_videos": 1962,
+      "n_positive_events": 1944,
+      "n_detected_events": 1832,
+      "event_recall": 94.24,
+      "normal_clips": 13890,
+      "normal_hours": 2.4693,
+      "false_alerts": 8228,
+      "fa_per_hour": 3332.073,
+      "threshold": 0.5,
+      "ci": {
+        "event_recall_ci95": [
+          93.22,
+          95.27
+        ],
+        "fa_per_hour_ci95": [
+          3208.88,
+          3454.45
+        ],
+        "n_boot": 1000
+      }
+    },
+    "0.8": {
+      "n_videos": 1962,
+      "n_positive_events": 1944,
+      "n_detected_events": 1745,
+      "event_recall": 89.76,
+      "normal_clips": 13890,
+      "normal_hours": 2.4693,
+      "false_alerts": 6625,
+      "fa_per_hour": 2682.91,
+      "threshold": 0.8,
+      "ci": {
+        "event_recall_ci95": [
+          88.43,
+          91.11
+        ],
+        "fa_per_hour_ci95": [
+          2559.68,
+          2798.4
+        ],
+        "n_boot": 1000
+      }
+    },
+    "0.9": {
+      "n_videos": 1962,
+      "n_positive_events": 1944,
+      "n_detected_events": 1667,
+      "event_recall": 85.75,
+      "normal_clips": 13890,
+      "normal_hours": 2.4693,
+      "false_alerts": 5574,
+      "fa_per_hour": 2257.289,
+      "threshold": 0.9,
+      "ci": {
+        "event_recall_ci95": [
+          84.27,
+          87.39
+        ],
+        "fa_per_hour_ci95": [
+          2138.49,
+          2370.36
+        ],
+        "n_boot": 1000
+      }
+    },
+    "argmax": {
+      "n_videos": 1962,
+      "n_positive_events": 1944,
+      "n_detected_events": 1837,
+      "event_recall": 94.5,
+      "normal_clips": 13890,
+      "normal_hours": 2.4693,
+      "false_alerts": 8403,
+      "fa_per_hour": 3402.943,
+      "threshold": 0.5,
+      "ci": {
+        "event_recall_ci95": [
+          93.48,
+          95.52
+        ],
+        "fa_per_hour_ci95": [
+          3282.12,
+          3525.73
+        ],
+        "n_boot": 1000
+      }
+    }
+  }
+}

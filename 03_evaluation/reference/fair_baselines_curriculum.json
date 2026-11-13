@@ -1,0 +1,868 @@
+{
+  "last": {
+    "scene": {
+      "total_clips": 4866,
+      "scene_acc": 78.87,
+      "normal_recall": 82.29,
+      "pre_crash_recall": 70.59,
+      "crash_recall": 70.87,
+      "pre_crash_precision": 15.13,
+      "PDR": 70.86,
+      "FAR": 17.71,
+      "normal_pred_total": 3079,
+      "pre_pred_total": 238,
+      "crash_pred_total": 1549,
+      "normal_gt": 3411,
+      "pre_gt": 51,
+      "crash_gt": 1404,
+      "scene_bal_acc": 74.58,
+      "scene_macro_f1": 59.6,
+      "scene_per_class": [
+        {
+          "label": "normal",
+          "gt_n": 3411,
+          "recall": 82.29,
+          "precision": 91.17,
+          "f1": 86.5
+        },
+        {
+          "label": "pre_crash",
+          "gt_n": 51,
+          "recall": 70.59,
+          "precision": 15.13,
+          "f1": 24.91
+        },
+        {
+          "label": "crash",
+          "gt_n": 1404,
+          "recall": 70.87,
+          "precision": 64.23,
+          "f1": 67.39
+        }
+      ],
+      "classes_with_gt": 3,
+      "frame_acc": 82.94,
+      "frame_total": 64306,
+      "frame_correct": 53334,
+      "clips_skipped_no_valid": 690
+    },
+    "type": {
+      "in_curriculum_n": 1870,
+      "in_curriculum_acc": 92.78,
+      "labeled_n": 1980,
+      "labeled_acc": 87.63,
+      "all7_denominator": 2323,
+      "all7_acc": 74.69,
+      "slotless_n": 343,
+      "per_class": {
+        "0": {
+          "gt_n": 696,
+          "precision": 95.11,
+          "recall": 95.11,
+          "f1": 95.11,
+          "ap": 97.56
+        },
+        "1": {
+          "gt_n": 346,
+          "precision": 84.34,
+          "recall": 88.73,
+          "f1": 86.48,
+          "ap": 91.71
+        },
+        "2": {
+          "gt_n": 104,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "ap": 5.25
+        },
+        "3": {
+          "gt_n": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "ap": 0.3
+        },
+        "4": {
+          "gt_n": 378,
+          "precision": 95.29,
+          "recall": 96.3,
+          "f1": 95.79,
+          "ap": 98.57
+        },
+        "5": {
+          "gt_n": 138,
+          "precision": 48.94,
+          "recall": 83.33,
+          "f1": 61.66,
+          "ap": 74.85
+        },
+        "6": {
+          "gt_n": 312,
+          "precision": 94.72,
+          "recall": 91.99,
+          "f1": 93.33,
+          "ap": 95.44
+        }
+      }
+    },
+    "cause": {
+      "n_clips": 1596,
+      "micro_precision": 58.56,
+      "micro_recall": 72.86,
+      "micro_f1": 64.93,
+      "per_bit": {
+        "0": {
+          "positives": 325,
+          "ap": 67.82,
+          "auc": 82.76
+        },
+        "1": {
+          "positives": 209,
+          "ap": 40.66,
+          "auc": 83.93
+        },
+        "2": {
+          "positives": 254,
+          "ap": 45.93,
+          "auc": 83.36
+        },
+        "3": {
+          "positives": 38,
+          "ap": 13.55,
+          "auc": 84.76
+        },
+        "5": {
+          "positives": 424,
+          "ap": 89.81,
+          "auc": 92.03
+        },
+        "6": {
+          "positives": 32,
+          "ap": 20.04,
+          "auc": 90.75
+        },
+        "8": {
+          "positives": 409,
+          "ap": 88.39,
+          "auc": 93.14
+        }
+      }
+    },
+    "arm": "last",
+    "type_mode": "curriculum",
+    "weights": {
+      "w_scene": [
+        0.1294284611940384,
+        2.5162932872772217,
+        0.3542781472206116
+      ],
+      "w_type": [
+        0.37488698959350586,
+        0.7302712202072144,
+        0.0,
+        0.0,
+        0.49543890357017517,
+        2.5608835220336914,
+        0.8385193943977356
+      ],
+      "pos_weight": [
+        3.6285715103149414,
+        9.305343627929688,
+        6.655954837799072,
+        20.0,
+        2.7465310096740723,
+        20.0,
+        3.21875
+      ]
+    }
+  },
+  "mean": {
+    "scene": {
+      "total_clips": 4866,
+      "scene_acc": 78.5,
+      "normal_recall": 82.38,
+      "pre_crash_recall": 74.51,
+      "crash_recall": 69.23,
+      "pre_crash_precision": 14.45,
+      "PDR": 69.42,
+      "FAR": 17.62,
+      "normal_pred_total": 3095,
+      "pre_pred_total": 263,
+      "crash_pred_total": 1508,
+      "normal_gt": 3411,
+      "pre_gt": 51,
+      "crash_gt": 1404,
+      "scene_bal_acc": 75.37,
+      "scene_macro_f1": 59.11,
+      "scene_per_class": [
+        {
+          "label": "normal",
+          "gt_n": 3411,
+          "recall": 82.38,
+          "precision": 90.79,
+          "f1": 86.38
+        },
+        {
+          "label": "pre_crash",
+          "gt_n": 51,
+          "recall": 74.51,
+          "precision": 14.45,
+          "f1": 24.2
+        },
+        {
+          "label": "crash",
+          "gt_n": 1404,
+          "recall": 69.23,
+          "precision": 64.46,
+          "f1": 66.76
+        }
+      ],
+      "classes_with_gt": 3,
+      "frame_acc": 82.53,
+      "frame_total": 64306,
+      "frame_correct": 53072,
+      "clips_skipped_no_valid": 690
+    },
+    "type": {
+      "in_curriculum_n": 1870,
+      "in_curriculum_acc": 92.78,
+      "labeled_n": 1980,
+      "labeled_acc": 87.63,
+      "all7_denominator": 2323,
+      "all7_acc": 74.69,
+      "slotless_n": 343,
+      "per_class": {
+        "0": {
+          "gt_n": 696,
+          "precision": 95.8,
+          "recall": 95.11,
+          "f1": 95.46,
+          "ap": 97.6
+        },
+        "1": {
+          "gt_n": 346,
+          "precision": 84.7,
+          "recall": 89.6,
+          "f1": 87.08,
+          "ap": 92.24
+        },
+        "2": {
+          "gt_n": 104,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "ap": 5.25
+        },
+        "3": {
+          "gt_n": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "ap": 0.3
+        },
+        "4": {
+          "gt_n": 378,
+          "precision": 94.52,
+          "recall": 95.77,
+          "f1": 95.14,
+          "ap": 98.64
+        },
+        "5": {
+          "gt_n": 138,
+          "precision": 49.78,
+          "recall": 82.61,
+          "f1": 62.13,
+          "ap": 75.12
+        },
+        "6": {
+          "gt_n": 312,
+          "precision": 92.28,
+          "recall": 91.99,
+          "f1": 92.13,
+          "ap": 95.13
+        }
+      }
+    },
+    "cause": {
+      "n_clips": 1596,
+      "micro_precision": 58.85,
+      "micro_recall": 72.74,
+      "micro_f1": 65.06,
+      "per_bit": {
+        "0": {
+          "positives": 325,
+          "ap": 69.88,
+          "auc": 83.28
+        },
+        "1": {
+          "positives": 209,
+          "ap": 42.87,
+          "auc": 83.29
+        },
+        "2": {
+          "positives": 254,
+          "ap": 48.0,
+          "auc": 84.52
+        },
+        "3": {
+          "positives": 38,
+          "ap": 12.08,
+          "auc": 82.07
+        },
+        "5": {
+          "positives": 424,
+          "ap": 90.73,
+          "auc": 93.17
+        },
+        "6": {
+          "positives": 32,
+          "ap": 25.64,
+          "auc": 92.12
+        },
+        "8": {
+          "positives": 409,
+          "ap": 89.6,
+          "auc": 94.5
+        }
+      }
+    },
+    "arm": "mean",
+    "type_mode": "curriculum",
+    "weights": {
+      "w_scene": [
+        0.1294284611940384,
+        2.5162932872772217,
+        0.3542781472206116
+      ],
+      "w_type": [
+        0.37488698959350586,
+        0.7302712202072144,
+        0.0,
+        0.0,
+        0.49543890357017517,
+        2.5608835220336914,
+        0.8385193943977356
+      ],
+      "pos_weight": [
+        3.6285715103149414,
+        9.305343627929688,
+        6.655954837799072,
+        20.0,
+        2.7465310096740723,
+        20.0,
+        3.21875
+      ]
+    }
+  },
+  "gru": {
+    "scene": {
+      "total_clips": 4866,
+      "scene_acc": 82.0,
+      "normal_recall": 86.4,
+      "pre_crash_recall": 78.43,
+      "crash_recall": 71.44,
+      "pre_crash_precision": 24.39,
+      "PDR": 71.68,
+      "FAR": 13.6,
+      "normal_pred_total": 3261,
+      "pre_pred_total": 164,
+      "crash_pred_total": 1441,
+      "normal_gt": 3411,
+      "pre_gt": 51,
+      "crash_gt": 1404,
+      "scene_bal_acc": 78.76,
+      "scene_macro_f1": 65.35,
+      "scene_per_class": [
+        {
+          "label": "normal",
+          "gt_n": 3411,
+          "recall": 86.4,
+          "precision": 90.37,
+          "f1": 88.34
+        },
+        {
+          "label": "pre_crash",
+          "gt_n": 51,
+          "recall": 78.43,
+          "precision": 24.39,
+          "f1": 37.21
+        },
+        {
+          "label": "crash",
+          "gt_n": 1404,
+          "recall": 71.44,
+          "precision": 69.6,
+          "f1": 70.51
+        }
+      ],
+      "classes_with_gt": 3,
+      "frame_acc": 84.58,
+      "frame_total": 64306,
+      "frame_correct": 54392,
+      "clips_skipped_no_valid": 690
+    },
+    "type": {
+      "in_curriculum_n": 1870,
+      "in_curriculum_acc": 92.99,
+      "labeled_n": 1980,
+      "labeled_acc": 87.83,
+      "all7_denominator": 2323,
+      "all7_acc": 74.86,
+      "slotless_n": 343,
+      "per_class": {
+        "0": {
+          "gt_n": 696,
+          "precision": 94.85,
+          "recall": 95.26,
+          "f1": 95.05,
+          "ap": 97.5
+        },
+        "1": {
+          "gt_n": 346,
+          "precision": 83.65,
+          "recall": 90.17,
+          "f1": 86.79,
+          "ap": 91.15
+        },
+        "2": {
+          "gt_n": 104,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "ap": 5.25
+        },
+        "3": {
+          "gt_n": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "ap": 0.3
+        },
+        "4": {
+          "gt_n": 378,
+          "precision": 95.28,
+          "recall": 96.03,
+          "f1": 95.65,
+          "ap": 98.45
+        },
+        "5": {
+          "gt_n": 138,
+          "precision": 57.87,
+          "recall": 82.61,
+          "f1": 68.06,
+          "ap": 75.05
+        },
+        "6": {
+          "gt_n": 312,
+          "precision": 86.97,
+          "recall": 91.99,
+          "f1": 89.41,
+          "ap": 94.92
+        }
+      }
+    },
+    "cause": {
+      "n_clips": 1596,
+      "micro_precision": 56.88,
+      "micro_recall": 74.81,
+      "micro_f1": 64.62,
+      "per_bit": {
+        "0": {
+          "positives": 325,
+          "ap": 67.58,
+          "auc": 84.38
+        },
+        "1": {
+          "positives": 209,
+          "ap": 40.88,
+          "auc": 83.18
+        },
+        "2": {
+          "positives": 254,
+          "ap": 47.38,
+          "auc": 84.15
+        },
+        "3": {
+          "positives": 38,
+          "ap": 12.64,
+          "auc": 82.05
+        },
+        "5": {
+          "positives": 424,
+          "ap": 89.0,
+          "auc": 93.05
+        },
+        "6": {
+          "positives": 32,
+          "ap": 20.07,
+          "auc": 92.31
+        },
+        "8": {
+          "positives": 409,
+          "ap": 86.01,
+          "auc": 93.76
+        }
+      }
+    },
+    "arm": "gru",
+    "type_mode": "curriculum",
+    "weights": {
+      "w_scene": [
+        0.1294284611940384,
+        2.5162932872772217,
+        0.3542781472206116
+      ],
+      "w_type": [
+        0.37488698959350586,
+        0.7302712202072144,
+        0.0,
+        0.0,
+        0.49543890357017517,
+        2.5608835220336914,
+        0.8385193943977356
+      ],
+      "pos_weight": [
+        3.6285715103149414,
+        9.305343627929688,
+        6.655954837799072,
+        20.0,
+        2.7465310096740723,
+        20.0,
+        3.21875
+      ]
+    }
+  },
+  "single_mid": {
+    "scene": {
+      "total_clips": 4866,
+      "scene_acc": 79.04,
+      "normal_recall": 82.62,
+      "pre_crash_recall": 68.63,
+      "crash_recall": 70.73,
+      "pre_crash_precision": 15.02,
+      "PDR": 70.65,
+      "FAR": 17.38,
+      "normal_pred_total": 3103,
+      "pre_pred_total": 233,
+      "crash_pred_total": 1530,
+      "normal_gt": 3411,
+      "pre_gt": 51,
+      "crash_gt": 1404,
+      "scene_bal_acc": 73.99,
+      "scene_macro_f1": 59.62,
+      "scene_per_class": [
+        {
+          "label": "normal",
+          "gt_n": 3411,
+          "recall": 82.62,
+          "precision": 90.82,
+          "f1": 86.52
+        },
+        {
+          "label": "pre_crash",
+          "gt_n": 51,
+          "recall": 68.63,
+          "precision": 15.02,
+          "f1": 24.65
+        },
+        {
+          "label": "crash",
+          "gt_n": 1404,
+          "recall": 70.73,
+          "precision": 64.9,
+          "f1": 67.69
+        }
+      ],
+      "classes_with_gt": 3,
+      "frame_acc": 83.05,
+      "frame_total": 64306,
+      "frame_correct": 53407,
+      "clips_skipped_no_valid": 690
+    },
+    "type": {
+      "in_curriculum_n": 1870,
+      "in_curriculum_acc": 93.16,
+      "labeled_n": 1980,
+      "labeled_acc": 87.98,
+      "all7_denominator": 2323,
+      "all7_acc": 74.99,
+      "slotless_n": 343,
+      "per_class": {
+        "0": {
+          "gt_n": 696,
+          "precision": 95.39,
+          "recall": 95.11,
+          "f1": 95.25,
+          "ap": 97.75
+        },
+        "1": {
+          "gt_n": 346,
+          "precision": 83.73,
+          "recall": 90.75,
+          "f1": 87.1,
+          "ap": 91.71
+        },
+        "2": {
+          "gt_n": 104,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "ap": 5.25
+        },
+        "3": {
+          "gt_n": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "ap": 0.3
+        },
+        "4": {
+          "gt_n": 378,
+          "precision": 95.28,
+          "recall": 96.03,
+          "f1": 95.65,
+          "ap": 98.4
+        },
+        "5": {
+          "gt_n": 138,
+          "precision": 51.32,
+          "recall": 84.78,
+          "f1": 63.93,
+          "ap": 71.08
+        },
+        "6": {
+          "gt_n": 312,
+          "precision": 94.7,
+          "recall": 91.67,
+          "f1": 93.16,
+          "ap": 94.95
+        }
+      }
+    },
+    "cause": {
+      "n_clips": 1596,
+      "micro_precision": 58.08,
+      "micro_recall": 72.09,
+      "micro_f1": 64.33,
+      "per_bit": {
+        "0": {
+          "positives": 325,
+          "ap": 69.23,
+          "auc": 83.15
+        },
+        "1": {
+          "positives": 209,
+          "ap": 44.5,
+          "auc": 83.83
+        },
+        "2": {
+          "positives": 254,
+          "ap": 45.89,
+          "auc": 84.07
+        },
+        "3": {
+          "positives": 38,
+          "ap": 12.1,
+          "auc": 81.87
+        },
+        "5": {
+          "positives": 424,
+          "ap": 89.88,
+          "auc": 92.59
+        },
+        "6": {
+          "positives": 32,
+          "ap": 23.98,
+          "auc": 91.21
+        },
+        "8": {
+          "positives": 409,
+          "ap": 87.82,
+          "auc": 93.29
+        }
+      }
+    },
+    "arm": "single_mid",
+    "type_mode": "curriculum",
+    "weights": {
+      "w_scene": [
+        0.1294284611940384,
+        2.5162932872772217,
+        0.3542781472206116
+      ],
+      "w_type": [
+        0.37488698959350586,
+        0.7302712202072144,
+        0.0,
+        0.0,
+        0.49543890357017517,
+        2.5608835220336914,
+        0.8385193943977356
+      ],
+      "pos_weight": [
+        3.6285715103149414,
+        9.305343627929688,
+        6.655954837799072,
+        20.0,
+        2.7465310096740723,
+        20.0,
+        3.21875
+      ]
+    }
+  },
+  "main_model_recomputed": {
+    "scene": {
+      "total_clips": 4866,
+      "scene_acc": 85.24,
+      "normal_recall": 88.68,
+      "pre_crash_recall": 64.71,
+      "crash_recall": 77.64,
+      "pre_crash_precision": 36.67,
+      "PDR": 77.18,
+      "FAR": 11.32,
+      "normal_pred_total": 3309,
+      "pre_pred_total": 90,
+      "crash_pred_total": 1467,
+      "normal_gt": 3411,
+      "pre_gt": 51,
+      "crash_gt": 1404,
+      "scene_bal_acc": 77.01,
+      "scene_macro_f1": 70.92,
+      "scene_per_class": [
+        {
+          "label": "normal",
+          "gt_n": 3411,
+          "recall": 88.68,
+          "precision": 91.42,
+          "f1": 90.03
+        },
+        {
+          "label": "pre_crash",
+          "gt_n": 51,
+          "recall": 64.71,
+          "precision": 36.67,
+          "f1": 46.81
+        },
+        {
+          "label": "crash",
+          "gt_n": 1404,
+          "recall": 77.64,
+          "precision": 74.3,
+          "f1": 75.93
+        }
+      ],
+      "classes_with_gt": 3,
+      "frame_acc": 87.56,
+      "frame_total": 64306,
+      "frame_correct": 56308,
+      "clips_skipped_no_valid": 690
+    },
+    "type": {
+      "in_curriculum_n": 1870,
+      "in_curriculum_acc": 90.96,
+      "labeled_n": 1980,
+      "labeled_acc": 85.91,
+      "all7_denominator": 2323,
+      "all7_acc": 73.22,
+      "slotless_n": 343,
+      "per_class": {
+        "0": {
+          "gt_n": 696,
+          "precision": 95.39,
+          "recall": 95.11,
+          "f1": 95.25,
+          "ap": 98.12
+        },
+        "1": {
+          "gt_n": 346,
+          "precision": 82.32,
+          "recall": 86.13,
+          "f1": 84.18,
+          "ap": 91.47
+        },
+        "2": {
+          "gt_n": 104,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "ap": 5.25
+        },
+        "3": {
+          "gt_n": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "ap": 0.3
+        },
+        "4": {
+          "gt_n": 378,
+          "precision": 85.25,
+          "recall": 96.3,
+          "f1": 90.43,
+          "ap": 97.59
+        },
+        "5": {
+          "gt_n": 138,
+          "precision": 55.56,
+          "recall": 65.22,
+          "f1": 60.0,
+          "ap": 65.17
+        },
+        "6": {
+          "gt_n": 312,
+          "precision": 85.67,
+          "recall": 91.99,
+          "f1": 88.72,
+          "ap": 96.54
+        }
+      }
+    },
+    "cause": {
+      "n_clips": 1596,
+      "micro_precision": 66.34,
+      "micro_recall": 67.71,
+      "micro_f1": 67.02,
+      "per_bit": {
+        "0": {
+          "positives": 325,
+          "ap": 63.85,
+          "auc": 80.23
+        },
+        "1": {
+          "positives": 209,
+          "ap": 36.82,
+          "auc": 75.71
+        },
+        "2": {
+          "positives": 254,
+          "ap": 44.01,
+          "auc": 79.7
+        },
+        "3": {
+          "positives": 38,
+          "ap": 13.16,
+          "auc": 73.77
+        },
+        "5": {
+          "positives": 424,
+          "ap": 88.62,
+          "auc": 94.72
+        },
+        "6": {
+          "positives": 32,
+          "ap": 23.28,
+          "auc": 85.25
+        },
+        "8": {
+          "positives": 409,
+          "ap": 86.62,
+          "auc": 91.87
+        }
+      }
+    },
+    "arm": "main_model_recomputed",
+    "type_mode": "curriculum",
+    "main_dump": "clip_scores_g304p3c.jsonl"
+  }
+}

@@ -1,0 +1,42 @@
+# V26-G350: CULane 车道线微调数据配置（用户明令新增车道线能力）
+# ── 数据根 = datasets/CULane 原地（就地摄取，不向 accident_v26 拷贝任何一帧，
+#    不污染 V26 训练数据集；事故库的 train/val split 与全部读数口径一字不动）
+# 头维度/类别键与 accident_detect.yaml 保持一致：链式加载 P3c 检测权重时
+# intersect_dicts 必须逐键对上，车道线之外的头全部冻结。
+path: datasets/CULane
+
+train: images/train
+val: images/val
+
+labels_dir: labels              # 空 txt（无 bbox，与事故真实集同形；v8 空标签零梯度）
+scene_labels_dir: scene_labels  # 每帧显式 "0\n0"=ignore（缺文件时加载器兜底是 1(normal)，
+                                # 冒烟实测会污染 scene ⇒ 必须显式写，culane_ingest 已落）
+cause_labels_dir: cause_labels  # 无成因标注 → cause_valid 屏蔽（且 cause loss 本就按 scene>=2 过滤）
+type_labels_dir: type_labels    # 缺省 → accident_type=-1 不监督
+lane_labels_dir: lane_labels    # G-350 摄取：culane_{seg}_{clip}_{frame}.json（折线归一化 0..1）
+
+nc: 3
+names:
+  0: car
+  1: person
+  2: cyclist
+
+nc_cls: 3
+scene_names:
+  0: ignore
+  1: normal
+  2: pre_crash
+  3: crash
+
+scene_cls_weight: 5.243   # 与事故 yaml 同值；本库全 ignore，实际不入梯度，仅保持建头口径一致
+num_causes: 9
+cause_names:
+  0: tailgating
+  2: dangerous_lane_change
+num_types: 7
+type_names:
+  0: rear_end
+  1: side_impact
+
+accident_viz:
+  enable: false           # 无事故帧，关掉可视化

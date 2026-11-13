@@ -1,0 +1,3 @@
+row_index,video_id,event_id,reason
+272,real_ccd_001397,real_ccd_001397,near_duplicate_candidate_conservative_exclusion
+392,real_kaggle-fahaddalwai-cctvfootagevideo_5_00,real_kaggle-fahaddalwai-cctvfootagevideo_5,zero_distance_hash_pair
